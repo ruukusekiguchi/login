@@ -16,7 +16,6 @@
       <button @click="loginSend">ログイン</button>
     </div>
     <p>{{ user.newitem }}</p>
-    <p>{{ welcome }}</p>
   </div>
 </template>
 
@@ -33,18 +32,18 @@ export default {
   },
   methods: {
     onKeyDown() {
-      this.additem();
+      this.newSend();
     },
     newSend(){
       if(this.item == "" || this.pass == ""){
         alert("未入力はやめてくださいよ");
         return;
       }
-      for(i = 0; i< this.newid;i++){
+      for(i = 0; i < this.newid;i++){
         count++;
       }
       var user = {
-        newid: this.count+1,
+        newid: this.count + 1,
         newitem: this.item,
         newpass: this.pass,
       };
